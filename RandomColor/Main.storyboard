@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Color View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RandomColorViewController" customModule="RandomColor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mr-Jv-9PM">
+                                <rect key="frame" x="112" y="80" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.039215686270000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="g7M-LA-Ptw"/>
+                                    <constraint firstAttribute="width" constant="150" id="hYh-kb-o20"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5r-mx-bOU">
+                                <rect key="frame" x="112" y="254" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0No-Nv-Vcl"/>
+                                    <constraint firstAttribute="width" constant="150" id="diW-hL-nXV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-06-6AN">
+                                <rect key="frame" x="112" y="299" width="150" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="G9D-4T-9Uq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="New Color"/>
+                                <connections>
+                                    <action selector="newColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIT-lG-a1r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4TI-06-6AN" firstAttribute="top" secondItem="c5r-mx-bOU" secondAttribute="bottom" constant="24" id="GVF-y6-J5B"/>
+                            <constraint firstItem="4TI-06-6AN" firstAttribute="centerX" secondItem="c5r-mx-bOU" secondAttribute="centerX" id="PjT-pM-INm"/>
+                            <constraint firstItem="4TI-06-6AN" firstAttribute="width" secondItem="c5r-mx-bOU" secondAttribute="width" id="XTT-Om-UZ4"/>
+                            <constraint firstItem="c5r-mx-bOU" firstAttribute="top" secondItem="6Mr-Jv-9PM" secondAttribute="bottom" constant="24" id="gzA-vk-O1A"/>
+                            <constraint firstItem="6Mr-Jv-9PM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qmx-QP-sek"/>
+                            <constraint firstItem="c5r-mx-bOU" firstAttribute="centerX" secondItem="6Mr-Jv-9PM" secondAttribute="centerX" id="y3k-Cg-FMm"/>
+                            <constraint firstItem="6Mr-Jv-9PM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="zfG-F4-0DH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorDescriptionLabel" destination="c5r-mx-bOU" id="Xfr-eb-GdC"/>
+                        <outlet property="colorView" destination="6Mr-Jv-9PM" id="6Gh-aS-LPC"/>
+                        <outlet property="newColorButton" destination="4TI-06-6AN" id="a1L-eW-nIh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
