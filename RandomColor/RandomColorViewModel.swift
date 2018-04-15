@@ -9,6 +9,7 @@
 import Foundation
 import ReactiveSwift
 import Result
+import UIKit
 
 private extension CGFloat {
     static var random: CGFloat {
@@ -26,7 +27,7 @@ struct RandomColorDisplayModel {
         let blue =  CGFloat.random
 
         color = UIColor(red: red, green: green, blue: blue, alpha: 1)
-        description = "red: \(red), green: \(green), blue: \(blue)"
+        description = String(format: "red: %.0f, green: %.0f, blue: %.0f", red * 256, green * 256, blue * 256)
     }
 }
 
