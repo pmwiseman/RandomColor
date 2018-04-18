@@ -6,7 +6,7 @@ This sample project provides a very simple example of ReactiveSwift.
 
 ## Requirements
 
-- *Xcode 9.2 (will update to 9.3)
+- Xcode 9.3
 
 ## Getting Started
 
